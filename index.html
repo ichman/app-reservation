@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Lumière – Réservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Salon Lumière</h1>
+    <p>Réservez votre rendez-vous en ligne</p>
+  </header>
+
+  <main>
+    <!-- Formulaire de réservation -->
+    <section class="carte">
+      <h2>Nouvelle réservation</h2>
+      <form id="form-reservation">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" required>
+
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" required>
+
+        <label for="prestation">Prestation</label>
+        <select id="prestation" required>
+          <option value="">-- Choisir --</option>
+          <option value="Coupe">Coupe</option>
+          <option value="Coupe + barbe">Coupe + barbe</option>
+          <option value="Coloration">Coloration</option>
+        </select>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" required>
+
+        <label for="heure">Heure</label>
+        <select id="heure" required>
+          <option value="">-- Choisir --</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+        </select>
+
+        <button type="submit">Réserver</button>
+        <p id="message"></p>
+      </form>
+    </section>
+
+    <!-- Liste des réservations -->
+    <section class="carte">
+      <h2>Réservations</h2>
+      <ul id="liste-reservations"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
