@@ -41,6 +41,14 @@ formulaire.addEventListener("submit", function (evenement) {
     heure: document.getElementById("heure").value,
   };
 
+  // Vérification : la date est-elle déjà passée ?
+  // (les dates "AAAA-MM-JJ" se comparent correctement comme du texte)
+  const aujourdhui = new Date().toISOString().slice(0, 10);
+  if (nouvelle.date < aujourdhui) {
+    afficherMessage("Impossible de réserver une date passée.", "erreur");
+    return;
+  }
+
   // Vérification : le créneau est-il déjà pris ?
   const dejaPris = reservations.some(
     (r) => r.date === nouvelle.date && r.heure === nouvelle.heure
