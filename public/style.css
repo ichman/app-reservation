@@ -89,3 +89,38 @@ button:hover {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
 }
+
+/* --- Espace coiffeur --- */
+#liste-admin {
+  list-style: none;
+  padding: 0;
+}
+
+#liste-admin li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+button.petit {
+  margin-top: 0;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: #c62828;
+}
+
+button.petit:hover {
+  background: #8e1c1c;
+}
+
+button.secondaire {
+  width: 100%;
+  background: #777;
+}
+
+[hidden] {
+  display: none !important;
+}

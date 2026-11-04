@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Lumière – Espace coiffeur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Salon Lumière</h1>
+    <p>Espace coiffeur</p>
+  </header>
+
+  <main>
+    <!-- Écran 1 : connexion (visible tant qu'on n'est pas connecté) -->
+    <section class="carte" id="ecran-connexion">
+      <h2>Connexion</h2>
+      <form id="form-connexion">
+        <label for="mot-de-passe">Mot de passe</label>
+        <input type="password" id="mot-de-passe" required>
+        <button type="submit">Se connecter</button>
+        <p id="message-connexion"></p>
+      </form>
+    </section>
+
+    <!-- Écran 2 : réservations (caché tant qu'on n'est pas connecté) -->
+    <section class="carte" id="ecran-reservations" hidden>
+      <h2>Toutes les réservations</h2>
+      <p id="message-admin"></p>
+      <ul id="liste-admin"></ul>
+      <button id="bouton-deconnexion" class="secondaire">Se déconnecter</button>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
